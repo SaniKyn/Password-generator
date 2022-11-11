@@ -1,13 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 import random
 
+
+# request -
 
 # Create your views here.
 
 def home(request):
     return render(request, 'generator/home.html')  # преход на главную страницу
 
+def info(request):
+    return render(request, 'generator/info.html')  # преход на страницу информации
 
 def password(request):
     charaters = list('abcdefghijklmnopqrstuvwxyz')  # буквы в нижнем регистре

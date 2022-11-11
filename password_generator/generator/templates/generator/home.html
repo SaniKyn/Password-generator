@@ -1,25 +1,33 @@
-<h1> Password Generator </h1>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+<div class="container text-center">
+    <h1> Генератор паролей </h1>
 
-<form action="{% url 'password' %}">
-    <select name="length">
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12" selected="selected">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-    </select>
-    <br>
-    <input type="checkbox" name="uppercase"> Uppercase
-    <br>
-    <input type="checkbox" name="numbers"> Numbers
-    <br>
-    <input type="checkbox" name="special"> Special Characters
-    <br>
+    <form action="{% url 'password' %}">
+        <select name="length">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected="selected">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select> Длина твоего пароля
+        <br>
+        <input type="checkbox" name="uppercase"> Заглавные буквы
+        <br>
+        <input type="checkbox" name="numbers"> Цифры
+        <br>
+        <input type="checkbox" name="special"> Символы(!,@,#,$,%,^,&,*,(,))
+        <br>
 
-    <input type="submit" value="Generate Password">
-</form>
+        <input type="submit" value="Генератор пароля" class="btn btn-primary">
+    </form>
+    <br>
+    <a href="{% url 'info' %}" class="btn btn-warning">Информация</a>
+</div>
+
